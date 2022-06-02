@@ -1,7 +1,7 @@
 /** Common config for bookstore. */
 
 
-let DB_URI = `postgresql://`;
+let DB_URI = `postgresql://postgres:${process.env.PASSWROD}@localhost:5432`;
 
 if (process.env.NODE_ENV === "test") {
   DB_URI = `${DB_URI}/books-test`;
